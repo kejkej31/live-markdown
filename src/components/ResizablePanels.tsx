@@ -95,7 +95,7 @@ const ResizablePanels: React.FC<ResizablePanelsProps> = ({
   }, [leftScrollRef, rightScrollRef]);
 
   return (
-    <div ref={containerRef} className="flex flex-grow w-full h-full overflow-hidden" style={{ minHeight: 0 }}>
+    <div ref={containerRef} className="flex grow w-full h-full overflow-hidden" style={{ minHeight: 0 }}>
       <div 
         className="h-full overflow-y-hidden bg-gray-50 dark:bg-gray-800 relative" // Added relative for potential future absolute positioned elements inside
         style={{ width: `${dividerPosition}%`, flexShrink: 0 }}
@@ -105,7 +105,7 @@ const ResizablePanels: React.FC<ResizablePanelsProps> = ({
       </div>
       
       <div
-        className="w-3 h-full bg-slate-300 dark:bg-slate-600 hover:bg-blue-500 dark:hover:bg-blue-400 cursor-col-resize flex-shrink-0 group flex items-center justify-center transition-colors duration-150 ease-in-out"
+        className="w-3 h-full bg-slate-300 dark:bg-slate-600 hover:bg-blue-500 dark:hover:bg-blue-400 cursor-col-resize shrink-0 group flex items-center justify-center transition-colors duration-150 ease-in-out"
         onMouseDown={handleMouseDown}
         role="separator"
         aria-orientation="vertical"
