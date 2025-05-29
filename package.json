@@ -20,15 +20,12 @@
     "mermaid": "^11.6.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "tailwind-typography": "^0.1.0",
     "tailwindcss": "^4.1.8"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.16",
-    "@types/node": "^22.14.0",
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.4",
-    "typescript": "~5.7.2",
-    "vite": "^6.2.0"
+    "@types/node": "^22.15.26",
+    "typescript": "~5.7.3",
+    "vite": "^6.3.5"
   }
 }
