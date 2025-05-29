@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markdown Live Previewer</title>
+  <link href="/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+  <style>
+    /* Custom scrollbar styling for a more polished look */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+    /* Ensure body and html take full height for flex layout */
+    html, body, #root {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden; /* Prevent body scrollbars when app manages its own scrolling */
+    }
+    /* Styling for highlighted code blocks */
+    .prose .hljs { /* Ensure hljs styles apply within prose */
+      background-color: #282c34; /* Match atom-one-dark background */
+      color: #abb2bf; /* Match atom-one-dark foreground */
+      padding: 1em;
+      border-radius: 0.375rem; /* Tailwind's md radius */
+      overflow-x: auto;
+    }
+    
+    line {
+      fill: white!important;
+      stroke: white!important;
+    }
+
+    path {
+      stroke: white!important;
+    }
+
+    text.messageText {
+      fill: white!important;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900">
+  <h1 class="text-3xl font-bold underline">
+    Hello world!
+  </h1>
+  <div id="root"></div>
+  
+  <!-- Main application script -->
+</body>
+</html>
+<script src="src/index.tsx" type="module"></script>
