@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef } from 'react';
+import React, { useState, useCallback, useRef, useEffect } from 'react';
 import ResizablePanels from './components/ResizablePanels';
 import MarkdownRenderer from './components/MarkdownRenderer';
 import { DEFAULT_MARKDOWN_CONTENT } from './constants';
@@ -12,13 +12,26 @@ declare global {
 }
 
 const App: React.FC = () => {
-  const [markdownInput, setMarkdownInput] = useState<string>(DEFAULT_MARKDOWN_CONTENT);
+  const [markdownInput, setMarkdownInput] = useState<string>('');
+
+  // Load content from localStorage on initial render
+  useEffect(() => {
+    const savedContent = localStorage.getItem('markdownContent');
+    if (savedContent) {
+      setMarkdownInput(savedContent);
+    } else {
+      setMarkdownInput(DEFAULT_MARKDOWN_CONTENT);
+    }
+  }, []);
 
   const leftPanelRef = useRef<HTMLTextAreaElement>(null); // Ref for the textarea
   const rightPanelRef = useRef<HTMLDivElement>(null); // Ref for the scrollable div on the right
 
   const handleMarkdownChange = useCallback((event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setMarkdownInput(event.target.value);
+    const newValue = event.target.value;
+    setMarkdownInput(newValue);
+    // Save to localStorage whenever content changes
+    localStorage.setItem('markdownContent', newValue);
   }, []);
 
   const InputPanel: React.ReactNode = (
