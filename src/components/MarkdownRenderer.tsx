@@ -111,7 +111,7 @@ const MarkdownRenderer: React.FC<MarkdownRendererProps> = ({ markdown }) => {
   return (
     <div 
       ref={outputRef} 
-      className="prose text-white prose-sm sm:prose-base prose-md dark:prose-invert max-w-none p-6 focus:outline-none" 
+      className="prose text-black dark:text-white prose-sm sm:prose-base prose-md dark:prose-invert max-w-none p-6 focus:outline-none" 
       dangerouslySetInnerHTML={{ __html: processedHtml }} 
       aria-live="polite"
     />
