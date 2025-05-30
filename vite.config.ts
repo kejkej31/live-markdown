@@ -4,6 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig(({ mode }) => {
   return {
+    base: '/markdown/',
     plugins: [
       tailwindcss(),
     ],
