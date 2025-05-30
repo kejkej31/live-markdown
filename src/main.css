@@ -1,2 +1,6 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
+.labelBkg {
+    background-color: rgba(248.6666666666, 255, 235.9999999999, 0.75);
+}

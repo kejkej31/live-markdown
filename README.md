@@ -1,14 +1,12 @@
-# Run and deploy your AI Studio app
+# Markdown Live Previewer
 
-This contains everything you need to run your app locally.
+This contains everything you need to run Markdown Live Previewer locally.
 
 ## Run Locally
 
-**Prerequisites:**  Node.js
-
+**Prerequisites:** Bun
 
 1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+   `bun install`
+2. Run the app:
+   `bun run dev`
