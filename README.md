@@ -4,7 +4,7 @@
 
 ## Live Version
 
-Check out the live version of the Markdown Live Previewer here: [http://kejkej.pl/markdown](http://kejkej.pl/markdown)
+Check out the live version of the Markdown Live Previewer here: [https://kejkej.pl/markdown](http://kejkej.pl/markdown)
 
 ## About The Project
 
