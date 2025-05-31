@@ -1,6 +1,6 @@
 # Github flavored markdown with mermaid diagrams
 
-![App Screenshot Placeholder](https://placehold.co/600x400)
+![App Screenshot Placeholder](./.github/readme-image.jpg)
 
 ## Live Version
 
