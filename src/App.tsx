@@ -71,21 +71,33 @@ const App: React.FC = () => {
           <h1 className="text-xl font-semibold">Markdown Live Previewer (with mermaid diagrams)</h1>
           <div className="flex space-x-2">
             <button 
-              onClick={() => exportAsHTML(rightPanelRef)}
+              onClick={() => {
+                if (rightPanelRef.current) {
+                  exportAsHTML(rightPanelRef as React.RefObject<HTMLDivElement>);
+                }
+              }}
               className="px-3 py-1 bg-blue-600 hover:bg-blue-700 rounded text-sm font-medium transition-colors"
               title="Export as HTML"
             >
               Save as HTML
             </button>
             <button 
-              onClick={() => exportAsImage(rightPanelRef)}
+              onClick={() => {
+                if (rightPanelRef.current) {
+                  exportAsImage(rightPanelRef as React.RefObject<HTMLDivElement>);
+                }
+              }}
               className="px-3 py-1 bg-green-600 hover:bg-green-700 rounded text-sm font-medium transition-colors"
               title="Export as Image"
             >
               Save as Image
             </button>
             <button 
-              onClick={() => exportAsPDF(rightPanelRef)}
+              onClick={() => {
+                if (rightPanelRef.current) {
+                  exportAsPDF(rightPanelRef as React.RefObject<HTMLDivElement>);
+                }
+              }}
               className="px-3 py-1 bg-red-600 hover:bg-red-700 rounded text-sm font-medium transition-colors"
               title="Export as PDF"
             >
