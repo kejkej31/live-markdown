@@ -66,9 +66,9 @@ const App: React.FC = () => {
 
   return (
     <div className="h-screen w-screen flex flex-col bg-gray-100 dark:bg-gray-900">
-      <header className="bg-slate-700 dark:bg-slate-800 text-white p-3 shadow-md">
+      <header className="bg-slate-700 dark:bg-slate-800 text-white p-3 border-b border-slate-700">
         <div className="flex justify-between items-center">
-          <h1 className="text-xl font-semibold">Markdown Live Previewer</h1>
+          <h1 className="text-xl font-semibold">Markdown Live Previewer (with mermaid diagrams)</h1>
           <div className="flex space-x-2">
             <button 
               onClick={() => exportAsHTML(rightPanelRef)}
